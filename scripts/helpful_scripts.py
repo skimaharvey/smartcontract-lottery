@@ -9,7 +9,7 @@ from brownie import (
 )
 
 FORKED_LOCAL_ENVIRONMENTS = ["mainnet-fork", "mainnet-fork-dev"]
-LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["development", "ganache-local"]
+LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["development", "ganache-local", "ganache"]
 
 
 def get_account(index=None, id=None):
@@ -37,13 +37,13 @@ contract_to_mock = {
 
 def get_contract(contract_name):
     """This function will grab the contract addresses from brownie config
-    if defined otherwise it will deploy a mock version of contract and 
-    return mock contrat 
+    if defined otherwise it will deploy a mock version of contract and
+    return mock contrat
 
         Args:
             contract_name (string)
 
-        Returns: 
+        Returns:
             brownie.network.contract.Projectcontract: The most recently deployed
             version of this contract
     """
